@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Appointment Form</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f2f2f2;
+}
+
+.container {
+  width: 400px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: blue;
+  color: white;
+  border: none;
+}
+</style>
+
+<script>
+function goNextPage(event){
+  event.preventDefault();   // stop normal form submit
+  window.location.href = "queue.html"; // open next page
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+<h2>Appointment Form</h2>
+
+<form onsubmit="goNextPage(event)">
+
+<label>Patient Name</label>
+<input type="text" required>
+
+<label>Department</label>
+<select required>
+<option value="">Select Department</option>
+<option>General</option>
+<option>Cardiology</option>
+<option>Dermatology</option>
+<option>Orthopedics</option>
+</select>
+
+<label>Date of Birth</label>
+<input type="date">
+
+<label>Visit Date</label>
+<input type="date">
+
+<label>Token Number</label>
+<input type="text">
+
+<label>Available Time Slots</label>
+<label>10:00 AM - 10:30 AM <input type="checkbox"></label>
+<label>10:30 AM - 11:00 AM <input type="checkbox"></label>
+<label>11:00 AM - 11:30 AM <input type="checkbox"></label>
+<label>11:30 AM - 12:00 PM <input type="checkbox"></label>
+
+<a href="queue.html">
+    <button type="submit">Submit</button>
+</a>
+</form>
+</div>
+
+</body>
+</html>
